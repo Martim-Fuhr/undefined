@@ -13,22 +13,3 @@ pnpm dev
 # or
 bun dev
 ```
-
-## Apos iniciar o projeto.
-
-1. Login e senha são:
-   {
-   "id": 1,
-   "email": "martim@teste.com",
-   "password": "!Teste123"
-   },
-   {
-   "id": 2,
-   "email": "teste@teste.com",
-   "password": "!Senha123"
-   },
-   {
-   "id": 3,
-   "email": "user@teste123.com",
-   "password": "!Pindaminhamgaba1"
-   }
