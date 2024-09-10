@@ -98,7 +98,7 @@ export default function ForgotPassword() {
       return (
         <Link
           href="/forgot-password"
-          className={buttonVariants({ variant: "link" })}
+          className={`${buttonVariants({ variant: "link" })} flex-wrap`}
         >
           Esqueci minha senha
         </Link>
