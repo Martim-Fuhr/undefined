@@ -40,40 +40,11 @@ export default function LoginPage() {
     return emailRegex.test(value);
   };
 
-  // const handleLogin = () => {
-  //   const correctEmail = email === "martim@teste.com";
-  //   const correctPassword = password === storedPassword;
-
-  //   if (!correctEmail || !validateEmail(email)) {
-  //     setInvalidEmail(
-  //       "E-mail inválido. Insira um endereço de e-mail no formato correto."
-  //     );
-  //     toast.error("E-mail incorreto.");
-  //   } else {
-  //     setInvalidEmail("");
-  //   }
-
-  //   if (!correctPassword || !validatePassword(password)) {
-  //     setInvalidPassword(
-  //       "Senha inválida ou incorreta. Verifique se a senha tem pelo menos 8 caracteres com letras maiúsculas, minúsculas, números e caracteres especiais, e tente novamente."
-  //     );
-  //     toast.error("Senha incorreta.");
-  //   } else {
-  //     setInvalidPassword("");
-  //   }
-
-  //   if (correctEmail && correctPassword) {
-  //     toast.success("Logado com sucesso!");
-  //     router.push("/home");
-  //   }
-  // };
-
   const handleLogin = async () => {
     try {
       setInvalidEmail("");
       setInvalidPassword("");
 
-      // Validar email
       if (!validateEmail(email)) {
         setInvalidEmail(
           "E-mail inválido. Insira um endereço de e-mail no formato correto."
@@ -82,7 +53,6 @@ export default function LoginPage() {
         return;
       }
 
-      // Validar senha
       if (!validatePassword(password)) {
         setInvalidPassword(
           "A senha deve ter pelo menos 8 caracteres com letras maiúsculas, minúsculas, números e caracteres especiais."
@@ -91,7 +61,6 @@ export default function LoginPage() {
         return;
       }
 
-      // Fazer a requisição POST para login
       const response = await axios.post(
         "http://localhost:5145/api/auth/login",
         {
